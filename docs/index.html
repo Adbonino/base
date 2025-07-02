@@ -3,10 +3,77 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Proyecto</title>
+  <title>Base</title>
 </head>
 <body>
-  <h1>¡Hola mundo desde GitHub Pages!</h1>
-  <p>Esta es mi página web del proyecto.</p>
+  <h1>Ansible - SAN Swiths G720</h1>
+  <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th>Nro</th>
+      <th>Tarea</th>
+      <th>Descripción</th>
+      <th>Observacion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Instalación física</td>
+      <td>Instalar físicamente 4 SAN switches G720, los equipos ya fueron instalados en los racks indicados por el cliente</td>
+      <td>Queda pendiente cableado eléctrico y red</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Relevar la configuración actual</td>
+      <td>Realizar relevamiento de las configuraciones existentes en las Fabrics A y B</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Presentar informe para zonas actuales para filtrado</td>
+      <td>El cliente recibe un listado de las zonas con observaciones encontradas y da su aprobación a las zonas que deberán ser migradas a la nueva configuración como también las que serán descartadas. En esta sección también el cliente define nomenclatura a utilizar para sus configuraciones de zonas</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Elaboracion de playbooks de ansible</td>
+      <td>Elaborar playbooks de ansible para la creación de las configuraciones necesarias en los nuevos equipos como también para el uso en tareas comunes de operación con SAN switches</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Implementacion de configuraciones</td>
+      <td>Preparar los switches SAN para la configuración de funcionamiento en fabrics y crear las configuraciones requeridas según lo aprobado por el cliente. Estas configuraciones se crearán vía ansible</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Migrar conexiones del switch SAN actual hacia los nuevos equipos</td>
+      <td>Las conexiones de fibra que van al switch actual brocade6510 &amp; G610 se migrará hacia los nuevos equipos</td>
+      <td>Esto se hará en ventana y la configuración de zonas ya deberá estar cargada en los equipos según lo mencionado en el punto 5</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Validaciones</td>
+      <td>Validar la operatividad de los equipos luego del cambio de conexiones al SAN G702</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Migracion fisica al sitio contingencia</td>
+      <td>Se deberá llevar el equipo desmontado en matriz al sitio de contingencia</td>
+      <td>Esto se hará en ventana. Para este punto desde el banco deberán prever las conexiones inter-sitio que pasa por el multiplexor para conectar el SAN G720 con el G610 que se instalará en contingencia</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Validaciones</td>
+      <td>Validar la conexión de los switches entre sitios y operatividad de los equipos</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+  
 </body>
 </html>

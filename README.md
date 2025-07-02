@@ -14,3 +14,8 @@ git remote add origin https://github.com/Adbonino/base.git
 git branch -M main
 git push -u origin main
 ```
+
+|Nro|Tarea|Descripción|Observacion|
+|---|---|---|---|
+|1|Instalación física|Instalar fisicamente 4 SAN switches G720, los equipos ya fueron instalados en los racks indicados por el cliente|Queda pendiente cableado eléctrico y red|
+|---|---|---|---|

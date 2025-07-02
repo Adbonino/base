@@ -1,0 +1,28 @@
+---
+- name: Configure zoning on SAN switches
+  hosts: all
+  gather_facts: no
+  vars_files:
+    - vars/zones.yml
+
+  tasks:
+    - name: Create zones
+      vars:
+        zone_cfg_commands: |
+          conf t
+          fcalias name ZONE_MEMBERS vsan 1
+          {% for zone in zones %}
+          zone name {{ zone.name }} vsan 1
+          {% for member in zone.members %}
+          member {{ member }}
+          {% endfor %}
+          {% endfor %}
+          zoneset name myzoneset vsan 1
+          {% for zone in zones %}
+          member {{ zone.name }}
+          {% endfor %}
+          zoneset activate name myzoneset vsan 1
+      cisco.nxos.nxos_config:
+        lines: "{{ zone_cfg_commands.split('\n') }}"
+        before: "terminal dont-ask"
+        save_when: changed

@@ -1,0 +1,9 @@
+zones:
+  - name: zone_A
+    members:
+      - "pwwn 20:00:00:25:B5:11:11:11"
+      - "pwwn 20:00:00:25:B5:22:22:22"
+  - name: zone_B
+    members:
+      - "pwwn 20:00:00:25:B5:33:33:33"
+      - "pwwn 20:00:00:25:B5:44:44:44"
